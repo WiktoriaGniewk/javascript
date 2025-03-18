@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 31</title>
+    <script type="text/javascript">
+        var Mebel = {
+            rodzaj: 'Szafa',
+            material: 'Drewno',
+            kolor: 'Brązowy',
+            Mebel_wyswietl_gniewkowska: function () {
+                document.write(
+                    'Obiekt: Mebel<br>' +
+                    'Pola:<br>' +
+                    'Rodzaj: ' + this.rodzaj + '<br>' +
+                    'Materiał: ' + this.material + '<br>' +
+                    'Kolor: ' + this.kolor + '<br>' +
+                    'Metoda: Mebel_wyswietl_gniewkowska' + '<br>' +
+                    'Nowe pole: cena = ' + this.cena + ' zł' + '<br>' +
+                    'Nowa metoda: Mebel_pokaz_gniewkowska'
+                );
+            }
+        };
+        
+        Mebel.cena = 1200;
+        Mebel.Mebel_pokaz_gniewkowska = function() {
+            alert('Cena mebla: ' + this.cena + ' zł');
+        };
+    </script>
+</head>
+<body>
+    <button onclick="Mebel.Mebel_wyswietl_gniewkowska()">Wyświetl dane</button>
+    <button onclick="Mebel.Mebel_pokaz_gniewkowska()">Pokaż cenę</button>
+</body>
+</html>

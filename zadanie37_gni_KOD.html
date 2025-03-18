@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gniewkowska()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+    <form>
+    <textarea name="gniewkowska" cols="80" rows="20" readonly>
+        <!DOCTYPE html>
+        <html lang="pl">
+        <head>
+            <meta charset="UTF-8">
+            <title>Zadanie 37</title>
+            <style>
+                .dobrze { color: blue; font-size: 4em; }
+                .zle { color: red; font-size: 7em; }
+            </style>
+        </head>
+        <body>
+            <h1>Sprawdź, czy znasz rok powstania JavaScript!</h1>
+            <form onsubmit="checkYear(event)">
+                <label for="rok_gni">Wprowadź rok:</label>
+                <input type="number" id="rok_gni" name="rok_gni" required>
+                <button type="submit">Sprawdź</button>
+            </form>
+            <p id="wynik"></p>
+        
+            <script>
+                function checkYear(event) {
+                    event.preventDefault();
+                    const rok_gni = document.getElementById('rok_gni').value;
+                    const resultElement = document.getElementById('wynik');
+                    resultElement.innerHTML = `wczytany rok = ${rok_gni}<br>`;
+        
+                    if (rok_gni == 1995) {
+                        resultElement.innerHTML += '<span class="dobrze">Brawo, znasz rok od kiedy działa JavaScript!</span>';
+                    } else {
+                        resultElement.innerHTML += '<span class="zle">Źle, musisz jeszcze poczytać!</span>';
+                    }
+                }
+            </script>
+        </body>
+        </html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_gniewkowska()"/>
+    <script type="text/javascript">
+    </script>
+    </body>
+    </html>

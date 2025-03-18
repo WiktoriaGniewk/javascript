@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+            <html lang="pl">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Zadanie 38</title>
+            </head>
+            <body style="background-color: silver;">
+            
+                <script>
+                    
+                    var imie_gni = prompt("Podaj Imię:", "");
+                    var nazwisko_gni = prompt("Podaj Nazwisko:", "");
+                    let dzien_gni = prompt("Podaj dzień urodzenia:", "");
+                    var liczba1 = imie_gni.length;
+                    var liczba2 = liczba1 + 7;
+                    var liczba3 = nazwisko_gni.length;
+                    var liczba4 = liczba3 + 4;
+                    var opcja1 = liczba1;
+                    var opcja2 = nazwisko_gni.length + 20;
+                    let opcja3 = +dzien_gni + 50;
+            
+                    document.write('<p style=color: darkgreen;font-size: 42px;>Moje imię to: ' + imie_gni + " " + nazwisko_gni + "</p>");
+                    document.write('<p style=color: darkgreen;font-size: 42px;>liczba1= ' + liczba1 + "</p>");
+                    document.write('<p style=color: darkgreen;font-size: 42px;>' + liczba1 + ' + 7 = ' + liczba2 + "</p>");
+                    document.write('<p style=color: darkgreen;font-size: 42px;>liczba3= ' + liczba3 + "</p>");
+                    document.write('<p style=color: darkgreen;font-size: 42px;>liczba4= ' + liczba3 + ' + 4 = ' + liczba4 + "</p>");
+                    
+                    document.write('<p style=color: red;font-size: 42px;>------------MENU------------</p>');
+                    document.write('<p style=color: red;font-size: 42px;>' + opcja1 + " - wyświetlanie teorii o operatorach</p>");
+                    document.write('<p style=color: red;font-size: 42px;>' + opcja2 + " - czy liczba należy do przedziału (" + liczba1 + ";" + liczba2 + "]</p>");     
+                    document.write('<p style=color: red;font-size: 42px;>' + opcja3 + " - czy liczba należy do przedziału (-nieskoczonosc," + liczba3 + ")  lub [" + liczba4 + " +nieskoczonosc)</p>");  
+
+                    function opcja() {
+                        var opcja_gni = parseInt(prompt("Wybierz opcję (" + opcja1 + ", " + opcja2 + ", " + opcja3 + "):", ""));
+                        const wyswietl = document.getElementById("wyswietl");
+                        
+                        if (opcja_gni == opcja1) {
+                            wyswietl.innerHTML = "<p style='color: blue; font-size: 42px;'>Jesteś w opcji " + opcja1 + " --> Teoria o operatorach logicznych</p>";
+                            wyswietl.innerHTML += "<p style='color: green; font-size: 42px;'>&& i x=3 y=4 (x < 9 && y > 2) wynik-->prawda</p>";
+                            wyswietl.innerHTML += "<p style='color: green; font-size: 42px;'>|| lub x=3 y=4 (x==8 || y==6) wynik-->fałsz</p>";
+                            wyswietl.innerHTML += "<p style='color: green; font-size: 42px;'>! zaprzeczenie x=3 y=4 !(x==y) wynik-->prawda</p>";
+                        } 
+                        else if (opcja_gni == opcja2) {
+                            wyswietl.innerHTML = "<p style='color: blue;'>Jesteś w opcji " + opcja2 + " --> sprawdzanie przedziału</p>";
+                            var liczba_gni = parseInt(prompt("Podaj liczbę do sprawdzenia:", ""));
+                            if (liczba_gni >= liczba1 && liczba_gni < liczba2) {
+                                wyswietl.innerHTML += "<p style='color: green;'>Liczba " + liczba_gni + " należy do przedziału.</p>";
+                            } else {
+                                wyswietl.innerHTML += "<p style='color: red;'>Liczba " + liczba_gni + " nie należy do przedziału.</p>";
+                            }
+                        } 
+                        else if (opcja_gni == opcja3) {
+                            wyswietl.innerHTML = "<p style='color: blue;'>Jesteś w opcji " + opcja3 + " --> sprawdzanie przedziału (-nieskoczonosc," + liczba3 + ") lub [" + liczba4 + " +nieskoczonosc)</p>";
+                            var liczba2_gni = parseInt(prompt("Podaj liczbę do sprawdzenia:", ""));
+                            if (liczba2_gni < liczba3 || liczba2_gni >= liczba4) {
+                                wyswietl.innerHTML += "<p style='color: green;'>Liczba " + liczba2_gni + " należy do przedziału.</p>";
+                            } else {
+                                wyswietl.innerHTML += "<p style='color: red;'>Liczba " + liczba2_gni + " nie należy do przedziału.</p>";
+                            }
+                        } 
+                        else {
+                            wyswietl.innerHTML = "<p style='color: red;'>Niepoprawna opcja.</p>";
+                        }
+                    }
+                    
+                </script>
+            
+                <div id="wyswietl"></div>
+                <button onclick="opcja()">Wybierz opcję</button>
+            
+            </body>
+            </html>
+            

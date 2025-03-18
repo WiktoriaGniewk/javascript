@@ -1,0 +1,43 @@
+
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gniewkowska()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+    <form>
+    <textarea name="gniewkowska" cols="80" rows="20" readonly>
+        <!DOCTYPE html>
+        <html lang="pl">
+        <head>
+            <meta charset="UTF-8">
+            <title>Zadanie 35</title>
+        </head>
+        <body>
+        <div style="color:red;font-size:50px;">
+            <script language="JavaScript">
+                var x = prompt("Podaj liczbę x=", "");
+                var a_gni = parseFloat(x);
+                document.write("Czytana liczba x=" + a_gni + "<br>");
+                
+                if (a_gni > 0) {
+                    document.write("Czytana liczba jest większa od 0" + "<br>");
+                } else if (a_gni == 0) {
+                    document.write("Czytana liczba jest równa 0" + "<br>");
+                } else {
+                    document.write("Czytana liczba jest mniejsza od 0" + "<br>");
+                }
+            </script>
+        </div>
+        </body>
+        </html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_gniewkowska()"/>
+    <script type="text/javascript">
+    </script>
+    </body>
+    </html>

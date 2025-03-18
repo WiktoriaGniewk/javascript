@@ -1,0 +1,39 @@
+
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gniewkowska()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+    <form>
+    <textarea name="gniewkowska" cols="80" rows="20" readonly>
+        <html lang="pl">
+            <head>
+                    <meta charset="UTF-8">
+                    <title>Zadanie 36</title>
+            </head>
+            <body>
+                <div>
+                    <script language="JavaScript">
+                        var x = prompt("podaj liczbę x=", "");
+                        var a_gni = parseFloat(x);
+                        document.write("czytana liczba x=" + a_gni + "<br>");
+                        if ((a_gni % 2)== 0) { document.write("<font color=red size=3>Liczba jest parzysta</font>" + "<br>"); }
+                        else 
+                        if ((a_gni % 2) >= 1) { document.write("<font color=silver size=5>Liczba jest nieparzysta</font>" + "<br>"); }
+            
+                    </script>
+                </div>
+            </body>
+            
+            </html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_gniewkowska()"/>
+    <script type="text/javascript">
+    </script>
+    </body>
+    </html>

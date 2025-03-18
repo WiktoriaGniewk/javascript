@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 39</title>
+</head>
+<body>
+    <h2 style="color:green;">MENU:</h2>
+    <p style="color:red;">1 - CZERWONY</p>
+    <p style="color:blue;">2 - NIEBIESKI</p>
+    
+    <input type="button" value="Sprawdź" onclick="fun_gni()" />
+    
+    <script>
+        function fun_gni() {
+            var x_gni = prompt("Podaj kolor (1, 2, czerwony, niebieski)", "");
+            x_gni = x_gni.toLowerCase();
+            
+            if (x_gni == "1" || x_gni == "czerwony") {
+                document.write('<h1 style="color:red;">Wczytałeś kolor czerwony</h1><br />');
+            } 
+            else if (x_gni == "2" || x_gni == "niebieski") {
+                document.write('<h6 style="color:blue;">Wczytałeś kolor niebieski</h6><br />');
+            } 
+            else {
+                document.write('<p style="color:black;">Niepoprawny wybór!</p>');
+            }
+        }
+    </script>
+</body>
+</html>
